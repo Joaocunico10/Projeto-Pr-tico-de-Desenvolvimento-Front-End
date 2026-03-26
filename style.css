@@ -135,6 +135,11 @@ img {
     color: var(--dourado);
     border-color: var(--dourado);
 }
+.tag-laranja {
+    background: rgba(232,119,34,.15);
+    color: #e87722;
+    border-color: #e87722;
+}
 
 
 .btn {
@@ -443,6 +448,97 @@ img {
     margin-bottom: 8px;
 }
 .timeline-card p { font-size: .9rem; }
+
+/* 3. EQUIPE / CARDS DE NAVEGAÇÃO (index) */
+
+.equipe {
+    padding: 80px 0;
+    background: var(--preto);
+}
+
+.equipe-flex {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.equipe-card {
+    flex: 1 1 280px;
+    max-width: 340px;
+    background: var(--cinza-escuro);
+    border-radius: var(--raio);
+    overflow: hidden;
+    border: 1px solid var(--cinza-medio);
+    transition: transform var(--transicao), border-color var(--transicao), box-shadow var(--transicao);
+    display: flex;
+    flex-direction: column;
+}
+.equipe-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--vermelho);
+    box-shadow: var(--sombra);
+}
+.equipe-card-classico:hover {
+    border-color: #e87722;
+}
+.equipe-card-classico .equipe-overlay {
+    background: rgba(232,119,34,.25);
+}
+.equipe-card-destaque {
+    transform: scale(1.04);
+    border-color: var(--vermelho);
+}
+.equipe-card-destaque:hover { transform: scale(1.04) translateY(-8px); }
+
+.equipe-card-img {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+.equipe-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform var(--transicao);
+}
+.equipe-card:hover .equipe-card-img img { transform: scale(1.08); }
+
+.equipe-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.45);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 16px;
+    opacity: 0;
+    transition: opacity var(--transicao);
+}
+.equipe-overlay span {
+    color: var(--branco);
+    font-size: .9rem;
+    font-weight: 700;
+    letter-spacing: .05em;
+}
+.equipe-card:hover .equipe-overlay { opacity: 1; }
+
+.equipe-card-corpo {
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+}
+.equipe-card-corpo h3 {
+    font-family: var(--fonte-titulo);
+    font-size: 1.4rem;
+    color: var(--branco);
+}
+.equipe-card-corpo > p { font-size: .85rem; color: #888; }
+.equipe-card-corpo .desc { font-size: .9rem; color: var(--texto); margin-top: 4px; }
 
 /*  4. JOÃO — contato, formulário, footer*/
 
